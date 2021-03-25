@@ -1,0 +1,15 @@
+<div class="stores-list">
+  <ul class="list-group">
+    <% @stores.each do |store| %>
+      <li class="list-group-item">
+        <h5 class="store">
+          <%= link_to store.name, store_path(store) %>
+        </h5>
+        <h6 class="industry"><%= store.industry %></h6>
+        <p>
+          <%= render store.addresses %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</div>

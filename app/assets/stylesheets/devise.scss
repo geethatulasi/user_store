@@ -1,0 +1,45 @@
+.signup,.signin{
+  width: 30vw;
+  height: 60vh;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px -5px #555;
+  padding: 25px;
+  background-color: #b3d9ff;
+}
+.heading{
+  text-align: center;
+  font-style: cursive;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color:#004d99;
+}
+.signup-btn,.signin-btn{
+  padding: 8px 8.9rem;
+  border-radius: 10px;
+  color: #004d99;
+  border-color: white;
+  border: none;
+}
+.shared-links{
+  padding: 10px 15px;
+  background-color: #004d99;
+  color: white;
+  font-size: 18px;
+  font-style: serif;
+  font-stretch: 5px;
+  margin-top: 20px;
+  font-weight: 800;
+  text-align: center;
+  border-radius: 10px;
+}
+.signin-btn{
+  padding: 8px 9.2rem !important;
+}
+
+.shared-links a:hover{
+  color: white;
+  text-decoration: none;
+}

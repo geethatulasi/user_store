@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  alloted: false
+  special: false
+
+two:
+  number: MyString
+  alloted: false
+  special: false

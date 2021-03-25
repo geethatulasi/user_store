@@ -1,0 +1,9 @@
+<div class="store">
+  <h4 class="name"><%= @store.name %></h4>
+  <hr width="100%">
+  <h5 class="industry ind-name"><%= @store.industry %></h5>
+  <h6>Addresses</h6>
+  <p class="list-group">
+    <%= render @store.addresses %>
+  </p>
+</div>

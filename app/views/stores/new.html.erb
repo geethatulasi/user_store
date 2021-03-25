@@ -1,0 +1,82 @@
+<div class="store-form">
+  <h4 class="form-title">New Store</h4>
+  <%= form_for @store,:html=>{:multipart=>true} do |f| %>
+    <div class="form-row">
+      <div class="form-group row col-sm-6">
+        <div class="col-sm-10">
+          <%= f.text_field :name,class: 'form-control',placeholder: 'Name' %>
+        </div>
+      </div>
+      <div class="form-group row col-sm-6">
+        <div class="col-sm-10">
+          <%= f.text_field :industry,class: 'form-control', placeholder: 'Industry' %>
+        </div>
+      </div>
+    </div>
+    <%= f.fields_for :addresses do |address| %>
+    <h5 class="address">Address</h5>
+      <div class="form-row">
+        <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :street,class: 'form-control', placeholder: 'Street' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :city,class: 'form-control', placeholder: 'City' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :state,class: 'form-control',placeholder: 'State' %>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :country,class: 'form-control', placeholder: 'Country' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :zipcode,class: 'form-control', placeholder: 'Zipcode' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= f.fields_for :addresses,class: 'form-row' do |address| %>
+    <h5 class="address">Address</h5>
+      <div class="form-row">
+        <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :street,class: 'form-control', placeholder: 'Street' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :city,class: 'form-control',  placeholder: 'City' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :state,class: 'form-control',  placeholder: 'State' %>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group row col-sm-4">
+          <div class="col-sm-10">
+            <%= address.text_field :country,class: 'form-control',  placeholder: 'Country' %>
+          </div>
+        </div>
+         <div class="form-group row col-sm-4 col-sm-offset-2">
+          <div class="col-sm-10">
+            <%= address.text_field :zipcode,class: 'form-control',  placeholder: 'Zipcode' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= f.submit "Save",class: 'btn save-btn' %>
+  <% end %>
+</div>
